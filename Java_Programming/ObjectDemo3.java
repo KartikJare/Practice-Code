@@ -1,0 +1,34 @@
+class Student 
+{
+    public String Name;
+    public int Rno;
+    public int Marks;
+
+    public Student(String str, int A, int B)
+    {
+        System.out.println("Inside construtor");
+        this.Name = str;
+        this.Rno = A;
+        this.Marks = B;
+    }
+
+    public boolean equals(Student obj)//sobj1 going to this keyword // record listen for 1.51min 
+    {
+        System.out.println("this.Name" +this.Name);
+        System.out.println("obj.Name " +obj.Name);
+
+        return true;
+    }
+}
+
+class ObjectDemo3
+{
+    public static void main(String A[])
+    {
+        Student sobj1 = new Student("Sagar",11,89);
+        Student sobj2 = new Student("Pooja",11,89);
+
+        System.out.println(sobj1.equals(sobj2));
+        
+    }
+}
